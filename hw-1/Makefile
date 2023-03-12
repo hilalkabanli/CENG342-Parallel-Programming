@@ -7,5 +7,5 @@ OBJ = 20050111070.o hellofunc.o
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-hellomake: $(OBJ)
+20050111070: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
