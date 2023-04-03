@@ -1,11 +1,11 @@
 
-CC=gcc
+CC=mpicc
 CFLAGS=-I.
 DEPS = hellomake.h
-OBJ = 20050111070.o hellofunc.o 
+
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-20050111070: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS)
+hellomake: 20050111070.o hellofunc.o 
+	$(CC) -o hellomake 20050111070.o hellofunc.o 

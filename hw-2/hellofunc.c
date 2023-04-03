@@ -1,14 +1,14 @@
-#include <stdio.h>
 #include <hellomake.h>
-#include <time.h>
+#include <stdio.h>
 #include <stdlib.h>
-void myPrintHelloMake(int rows, int cols, double **matrix, double *vector, double *result) {
-  for (int i = 0; i < rows; i++) {
-    result[i] = 0.0;
-    for (int j = 0; j < cols; j++) {
-      result[i] += matrix[i][j] * vector[j];
-    }
-  }
 
-  return;
+
+void myPrintHelloMake(double *matrix, double *vector, double *result, int matrix_size) {
+    int i, j;
+    for (i = 0; i < matrix_size; i++) {
+        result[i] = 0.0;
+        for (j = 0; j < matrix_size; j++) {
+            result[i] += matrix[i * matrix_size + j] * vector[j];
+        }
+    }
 }

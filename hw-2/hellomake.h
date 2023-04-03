@@ -2,4 +2,4 @@
 example include file
 */
 
-void myPrintHelloMake(int rows, int cols, double **matrix, double *vector, double *result);
+void myPrintHelloMake(double *matrix, double *vector, double *result, int matrix_size);
